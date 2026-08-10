@@ -6,11 +6,11 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 
 interface EventDateSelectorProps {
   events: AppEvent[];
-  selectedScheduleId: string | null;
+  selectedScheduleIds: string[];
   onSelect: (scheduleId: string) => void;
 }
 
-export function EventDateSelector({ events, selectedScheduleId, onSelect }: EventDateSelectorProps) {
+export function EventDateSelector({ events, selectedScheduleIds, onSelect }: EventDateSelectorProps) {
   // Extract all schedules from the selected events
   const allSchedules = events.flatMap(event => 
     event.schedules.map(schedule => ({
@@ -32,13 +32,17 @@ export function EventDateSelector({ events, selectedScheduleId, onSelect }: Even
   return (
     <div className="grid gap-4 w-full">
       {allSchedules.map((schedule, index) => {
-        const isSelected = selectedScheduleId === schedule.id;
+        const isSelected = selectedScheduleIds.includes(schedule.id);
         
         return (
           <motion.button
             key={schedule.id}
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              scale: isSelected ? 1.03 : 1
+            }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
             onClick={() => onSelect(schedule.id)}
             className={`relative w-full text-left overflow-hidden rounded-2xl transition-all duration-300

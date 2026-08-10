@@ -47,7 +47,7 @@ export type Activity = {
 
 export type MissionData = {
   selectedEvents: string[]; // Event IDs
-  selectedSchedule: string | null; // Schedule ID
+  selectedSchedules: string[]; // Schedule IDs
   selectedFoods: string[]; // Food IDs
   selectedActivities: string[]; // Activity IDs
 };

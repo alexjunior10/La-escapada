@@ -18,20 +18,26 @@ export function OptionCard({ id, title, image, description, selected, onClick, i
   return (
     <motion.button
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
+      animate={{ 
+        opacity: 1, 
+        y: 0,
+        scale: selected ? 1.05 : 1 // Hacer más grande cuando está seleccionado
+      }}
+      transition={{ delay: index * 0.1, duration: 0.5, scale: { type: "spring", stiffness: 300, damping: 20 } }}
       onClick={onClick}
       className={`relative w-full text-left overflow-hidden rounded-2xl transition-all duration-300 group
         ${selected 
-          ? "border-2 border-primary bg-primary/10 shadow-[0_0_20px_rgba(var(--primary),0.3)]" 
-          : "border-2 border-white/20 bg-cards/60 hover:bg-white/40 hover:border-white/40"
+          ? "border-2 border-primary bg-primary/10 shadow-[0_0_30px_rgba(var(--primary),0.4)] z-10" 
+          : "border-2 border-white/20 bg-cards/60 hover:bg-white/40 hover:border-white/40 z-0"
         }
         backdrop-blur-md p-4 flex items-center gap-4`}
     >
       {/* Icon or Image placeholder */}
-      <div className="w-16 h-16 rounded-xl bg-white/20 flex-shrink-0 flex items-center justify-center overflow-hidden relative border border-white/30">
+      <div className={`rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden relative border border-white/30 transition-all duration-500
+        ${selected ? "w-20 h-20 shadow-lg shadow-primary/30" : "w-16 h-16 bg-white/20"}
+      `}>
         {image ? (
-          <Image src={image} alt={title} fill className="object-cover" />
+          <Image src={image} alt={title} fill className="object-cover" unoptimized={true} />
         ) : (
           <span className="text-2xl opacity-50">✨</span>
         )}

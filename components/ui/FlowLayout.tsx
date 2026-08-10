@@ -5,19 +5,22 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { Floating } from "@/components/animations/Floating";
 import { getStickersSlice } from "@/data/stickers";
 import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
 
 interface FlowLayoutProps {
   children: ReactNode;
   showStickers?: boolean;
   stickersRange?: [number, number]; // [start, end]
   className?: string;
+  onBack?: () => void;
 }
 
 export function FlowLayout({ 
   children, 
   showStickers = true, 
   stickersRange = [0, 5],
-  className = ""
+  className = "",
+  onBack
 }: FlowLayoutProps) {
   
   const stickers = getStickersSlice(stickersRange[0], stickersRange[1]);
@@ -25,6 +28,19 @@ export function FlowLayout({
   return (
     <div className={`min-h-screen flex flex-col relative overflow-hidden bg-background px-4 py-8 md:px-8 md:py-12 ${className}`}>
       
+      {/* Botón de retroceso global */}
+      {onBack && (
+        <div className="absolute top-6 left-6 md:top-8 md:left-8 z-50">
+          <button
+            onClick={onBack}
+            className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-cards/60 backdrop-blur-md rounded-full shadow-md border border-white/40 text-foreground/70 hover:text-primary hover:scale-105 transition-all focus:outline-none hover:bg-white/40"
+            aria-label="Volver atrás"
+          >
+            <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+        </div>
+      )}
+
       {/* 1. Fondo (Burbujas Glow) */}
       <FadeIn delay={0} duration={1}>
         <div className="fixed inset-0 w-full h-full pointer-events-none z-0">

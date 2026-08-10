@@ -1,47 +1,47 @@
 export const messages = {
   screen0: {
-    title: "Misión Secreta",
-    subtitle: "Iniciando protocolo de seguridad...",
-    buttonText: "Comenzar"
+    title: "La Escapada",
+    subtitle: "Hay una noche perfecta que nadie ha planeado aún...",
+    buttonText: "Abrir el sobre secreto"
   },
   screen1: {
-    title: "Misión Internacional",
-    subtitle: "Top Secret",
-    description: "El Comité Internacional de Gatitos necesita tu ayuda para construir la experiencia perfecta. ¿Aceptas el encargo?",
-    buttonAccept: "Acepto la misión 🐾"
+    title: "El Setlist de tu Vida",
+    subtitle: "Acceso backstage 🎤",
+    description: "El equipo de producción lleva semanas preparando algo que aún no está en ningún cartel. Necesitamos tu criterio para armar el setlist perfecto. Tú eres la headliner de esta noche.",
+    buttonAccept: "Acepto el accès backstage 🎙️"
   },
   screen2: {
-    title: "Análisis de Experiencias",
-    subtitle: "Paso 1 de 4",
-    question: "¿Qué experiencias te llaman más la atención?",
-    buttonNext: "Continuar"
+    title: "Era 1: El Show Principal",
+    subtitle: "Soundcheck en progreso",
+    question: "¿Qué experiencia quieres como plato fuerte de la noche?",
+    buttonNext: "Siguiente era →"
   },
   screen3: {
-    title: "Sincronización de Agendas",
-    subtitle: "Paso 2 de 4",
-    question: "¿Cuándo normalmente tienes libre para estas experiencias?",
-    buttonNext: "Confirmar horario"
+    title: "Era 2: La Gira",
+    subtitle: "Coordinando las fechas",
+    question: "¿Cuándo señalamos la fecha del show?",
+    buttonNext: "Fecha confirmada 📌"
   },
   screen4: {
-    title: "Abastecimiento",
-    subtitle: "Paso 3 de 4",
-    question: "¿Qué se te antoja comer ese día?",
-    buttonNext: "Miam miam"
+    title: "Era 3: El Catering del Tour",
+    subtitle: "Zona de artistas",
+    question: "¿Qué pide la headliner en su rider técnico?",
+    buttonNext: "Rider aprobado ✅"
   },
   screen5: {
-    title: "Post-evento",
-    subtitle: "Paso 4 de 4",
-    question: "¿Qué haríamos después?",
-    buttonNext: "Finalizar análisis"
+    title: "Era 4: El Afterparty",
+    subtitle: "Después de las luces",
+    question: "¿Cómo cerramos esta noche legendaria?",
+    buttonNext: "Setlist completo 🎉"
   },
   screen6: {
-    title: "Analizando compatibilidad...",
+    title: "Taylor está revisando el setlist...",
     subtitle: "Por favor espere",
   },
   screen7: {
-    title: "Resumen de la misión",
-    subtitle: "Misión Completada",
-    buttonNext: "Ver resultados"
+    title: "Resumen del tour",
+    subtitle: "Sold Out",
+    buttonNext: "Ver el cartel"
   },
   screen8: {
     title: "Hay un pequeño detalle...",
@@ -50,6 +50,6 @@ export const messages = {
   screen9: {
     title: "¿Qué dices?",
     buttonYes: "Aceptar ❤️",
-    buttonThink: "Todavía estoy procesando esta misión 😹"
+    buttonThink: "Todavía estoy procesando esta propuesta 🤔"
   }
 };

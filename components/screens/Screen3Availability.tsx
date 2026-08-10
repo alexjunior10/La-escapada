@@ -10,34 +10,30 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 
 interface Screen3AvailabilityProps {
   selectedEvents: string[];
-  selectedSchedule: string | null;
-  onSelectSchedule: (id: string) => void;
+  selectedSchedules: string[];
+  onToggleSchedule: (id: string) => void;
   onNext: () => void;
-  onBack?: () => void; // Optional, might be good to go back, but not required by PRD
 }
 
 export function Screen3Availability({ 
   selectedEvents, 
-  selectedSchedule, 
-  onSelectSchedule, 
+  selectedSchedules, 
+  onToggleSchedule, 
   onNext 
 }: Screen3AvailabilityProps) {
-  
-  const isNextDisabled = !selectedSchedule;
-  
-  // Filter only the events the user selected in the previous step
-  const filteredEvents = useMemo(() => {
-    return eventsData.filter(event => selectedEvents.includes(event.id));
-  }, [selectedEvents]);
+  const isNextDisabled = selectedSchedules.length === 0;
+
+  // Filtrar eventos que el usuario seleccionó en el paso anterior
+  const eventsToShow = eventsData.filter(e => selectedEvents.includes(e.id));
 
   return (
-    <div className="w-full flex flex-col pt-8 pb-24 relative z-10">
+    <div className="w-full flex flex-col pt-8 pb-24 z-10 relative">
       <FadeIn delay={0.1} duration={0.8}>
         <ProgressBar currentStep={2} totalSteps={4} />
       </FadeIn>
 
       <FadeIn delay={0.3} duration={0.8}>
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-primary uppercase mb-2 block opacity-90">
             {messages.screen3.subtitle}
           </span>
@@ -50,16 +46,19 @@ export function Screen3Availability({
         </div>
       </FadeIn>
 
-      <div className="w-full max-w-2xl mx-auto mb-12">
+      <div className="w-full max-w-2xl mx-auto mb-12 flex flex-col gap-6">
         <EventDateSelector 
-          events={filteredEvents}
-          selectedScheduleId={selectedSchedule}
-          onSelect={onSelectSchedule}
+          events={eventsToShow}
+          selectedScheduleIds={selectedSchedules}
+          onSelect={onToggleSchedule}
         />
       </div>
 
       <FadeIn delay={0.8} duration={0.8}>
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col items-center gap-3">
+          <p className="text-sm font-medium text-primary animate-pulse">
+            Selecciona hasta 3 opciones y presiona Continuar
+          </p>
           <Button 
             onClick={onNext} 
             disabled={isNextDisabled}

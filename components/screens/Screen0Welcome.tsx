@@ -34,7 +34,7 @@ export function Screen0Welcome({ onNext }: Screen0WelcomeProps) {
             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-white/60 to-white/10 pointer-events-none"></div>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-medium relative z-10">
               {/* Using the old description for screen 0 since it is not in the new messages.ts explicitly or I can use a hardcoded one */}
-              Nuestros agentes felinos de élite han estado preparando algo estrictamente confidencial durante semanas. Necesitamos tu impecable gusto para descifrar el siguiente paso de esta operación de máxima seguridad.
+              El equipo de producción ha estado preparando algo que aún no está en ningún cartel ni en ningún comunicado oficial. Necesitamos tu criterio para descubrir cuál será la noche más épica de este año.
             </p>
           </div>
         </FadeIn>

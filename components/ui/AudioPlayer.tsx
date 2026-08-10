@@ -48,7 +48,7 @@ export function AudioPlayer() {
     <>
       <audio 
         ref={audioRef} 
-        src="/audio/background-music.mp3" 
+        src="/audio/antihero.mp3" 
         loop 
         preload="auto"
       />

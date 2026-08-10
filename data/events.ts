@@ -16,16 +16,16 @@ export const eventsData: AppEvent[] = [
   },
   {
     id: "hans-zimmer",
-    name: "Hans Zimmer",
+    name: "Hans Zimmer Candlelight",
     category: "Concierto",
     schedules: [
       { id: "hans-s1", date: "2026-09-09", time: "21:00", label: "9 de Septiembre, 9:00 PM" }
     ],
     location: "Arena Principal",
-    image: "/images/hans-zimmer.jpg", // TBD
-    description: "La magia de las bandas sonoras en vivo con orquesta sinfónica.",
+    image: "/images/hans-zimmer.jpg",
+    description: "Las bandas sonoras más épicas de la historia, en vivo y a la luz de las velas.",
     price: "$$$",
-    tags: ["Sinfónico", "Películas"]
+    tags: ["Sinfónico", "Candlelight", "Películas"]
   },
   {
     id: "bacilos",
@@ -93,5 +93,18 @@ export const eventsData: AppEvent[] = [
     description: "Humor negro y muchas risas garantizadas.",
     price: "$$",
     tags: ["Comedia", "Show"]
+  },
+  {
+    id: "marchar-keiko",
+    name: "Marchar contra Keiko",
+    category: "Otro",
+    schedules: [
+      { id: "mk-s1", date: "2026-08-15", time: "17:00", label: "15 de Agosto, 5:00 PM" }
+    ],
+    location: "Plaza San Martín",
+    image: "/images/marchar contra keiko.jpg",
+    description: "Llevar su piedra.",
+    price: "Gratis",
+    tags: ["Marcha", "Protesta", "Piedras"]
   }
 ];

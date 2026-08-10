@@ -1,6 +1,5 @@
 import { Sticker } from "@/types";
 
-// 10 stickers cuidadosamente distribuidos para acercarlos al centro y rellenar los espacios
 export const stickersData: Sticker[] = [
   {
     id: "1",
@@ -28,8 +27,8 @@ export const stickersData: Sticker[] = [
   },
   {
     id: "3",
-    src: "/images/sakura.png",
-    alt: "Sakura",
+    src: "/images/ayuwoki.jpg",
+    alt: "Ayuwoki",
     positionClass: "top-[25%] right-[2%] w-44 h-44 md:w-56 md:h-56",
     delay: 1.5,
     duration: 8,
@@ -37,20 +36,18 @@ export const stickersData: Sticker[] = [
     xOffset: 15,
     rotation: -20,
     baseOpacity: 0.5,
-    isImagePng: true,
   },
   {
     id: "4",
-    src: "/images/flor-de-cerezo.png",
-    alt: "Flor de cerezo",
+    src: "/images/maicol no juzga.jpg",
+    alt: "Maicol no juzga",
     positionClass: "bottom-[8%] left-[25%] w-32 h-32 md:w-40 md:h-40",
     delay: 1.2,
     duration: 5,
     yOffset: 25,
     xOffset: -5,
     rotation: 10,
-    baseOpacity: 0.45,
-    isImagePng: true,
+    baseOpacity: 0.6,
   },
   {
     id: "5",
@@ -78,8 +75,8 @@ export const stickersData: Sticker[] = [
   },
   {
     id: "7",
-    src: "/images/meme taylor.jpg",
-    alt: "Taylor meme",
+    src: "/images/meme taylor 3.jpg",
+    alt: "Taylor meme 3",
     positionClass: "top-[42%] right-[16%] w-24 h-24 md:w-32 md:h-32 z-0",
     delay: 2.0,
     duration: 5.5,
@@ -102,8 +99,8 @@ export const stickersData: Sticker[] = [
   },
   {
     id: "9",
-    src: "/images/gato pensando.jpg",
-    alt: "Gato pensando",
+    src: "/images/llama sospechosa.jpg",
+    alt: "Llama sospechosa",
     positionClass: "bottom-[35%] left-[12%] w-20 h-20 md:w-28 md:h-28",
     delay: 2.2,
     duration: 6,
@@ -114,19 +111,43 @@ export const stickersData: Sticker[] = [
   },
   {
     id: "10",
-    src: "/images/flor y zorro.png",
-    alt: "Flor y zorro",
+    src: "/images/gato bomba.jpg",
+    alt: "Gato bomba",
     positionClass: "top-[18%] left-[25%] w-40 h-40 md:w-48 md:h-48 z-0",
     delay: 2.5,
     duration: 9,
     yOffset: 35,
     xOffset: 20,
     rotation: -5,
-    baseOpacity: 0.25, // Un poco más visible pero tenue como marca de agua
-    isImagePng: true,
+    baseOpacity: 0.45,
+  },
+  {
+    id: "11",
+    src: "/images/gato secuestrador.jpg",
+    alt: "Gato secuestrador",
+    positionClass: "top-[30%] left-[45%] w-32 h-32 md:w-40 md:h-40 z-0",
+    delay: 1.7,
+    duration: 8.2,
+    yOffset: -20,
+    xOffset: 15,
+    rotation: 20,
+    baseOpacity: 0.3,
+  },
+  {
+    id: "12",
+    src: "/images/lalma con chicle.jpg",
+    alt: "Llama chicle",
+    positionClass: "bottom-[40%] right-[30%] w-28 h-28 md:w-36 md:h-36 z-0",
+    delay: 0.9,
+    duration: 7.1,
+    yOffset: 25,
+    xOffset: -10,
+    rotation: -18,
+    baseOpacity: 0.4,
   }
 ];
 
+// Retorna un slice de los stickers, permitiendo usar distintos según la pantalla
 export const getStickersSlice = (start: number, end: number) => {
   return stickersData.slice(start, end);
 };

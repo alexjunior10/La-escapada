@@ -3,7 +3,7 @@
 import { messages } from "@/data/messages";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Button } from "@/components/ui/Button";
-import { Check, ShieldAlert } from "lucide-react";
+import { Check, Mic } from "lucide-react";
 
 interface Screen1MissionProps {
   onNext: () => void;
@@ -14,7 +14,7 @@ export function Screen1Mission({ onNext }: Screen1MissionProps) {
     <>
       <FadeIn delay={0.2} duration={1}>
         <div className="flex items-center justify-center w-16 h-16 bg-primary/20 text-primary rounded-full mb-6 shadow-inner mx-auto">
-          <ShieldAlert className="w-8 h-8" />
+          <Mic className="w-8 h-8" />
         </div>
       </FadeIn>
       
