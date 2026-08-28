@@ -3,108 +3,146 @@ import { AppEvent } from "@/types";
 export const eventsData: AppEvent[] = [
   {
     id: "amen",
-    name: "Amen",
+    name: "Amén",
     category: "Concierto",
+    location: "Por definir",
+    image: "/images/amen.jpg",
+    description: "Concierto de Amén",
+    price: "Variable",
+    tags: ["Música", "Rock"],
     schedules: [
-      { id: "amen-s1", date: "2026-08-21", time: "20:00", label: "21 de Agosto, 8:00 PM" }
-    ],
-    location: "Teatro Municipal",
-    image: "/images/amen.jpg", // TBD
-    description: "Un concierto espectacular para disfrutar la mejor música en vivo.",
-    price: "$$",
-    tags: ["Música", "Rock"]
+      {
+        id: "amen-1",
+        date: "2026-08-21",
+        time: "Noche",
+        label: "21 de Agosto"
+      }
+    ]
   },
   {
     id: "hans-zimmer",
-    name: "Hans Zimmer Candlelight",
+    name: "Hans Zimmer",
     category: "Concierto",
-    schedules: [
-      { id: "hans-s1", date: "2026-09-09", time: "21:00", label: "9 de Septiembre, 9:00 PM" }
-    ],
-    location: "Arena Principal",
+    location: "Por definir",
     image: "/images/hans-zimmer.jpg",
-    description: "Las bandas sonoras más épicas de la historia, en vivo y a la luz de las velas.",
-    price: "$$$",
-    tags: ["Sinfónico", "Candlelight", "Películas"]
+    description: "Tributo o concierto de Hans Zimmer",
+    price: "Variable",
+    tags: ["Música Clásica", "Soundtracks"],
+    schedules: [
+      {
+        id: "hz-1",
+        date: "2026-09-09",
+        time: "Noche",
+        label: "9 de Septiembre"
+      }
+    ]
   },
   {
     id: "bacilos",
     name: "Bacilos",
     category: "Concierto",
+    location: "Por definir",
+    image: "/images/bacilos.jpg",
+    description: "Concierto de Bacilos",
+    price: "Variable",
+    tags: ["Música", "Pop Latino"],
     schedules: [
-      { id: "bacilos-s1", date: "2026-09-18", time: "20:30", label: "18 de Septiembre, 8:30 PM" }
-    ],
-    location: "Estadio Central",
-    image: "/images/bacilos.jpg", // TBD
-    description: "Mi primer millón y todos los éxitos para cantar a todo pulmón.",
-    price: "$$",
-    tags: ["Pop", "Latino"]
+      {
+        id: "bacilos-1",
+        date: "2026-09-18",
+        time: "Noche",
+        label: "18 de Septiembre"
+      }
+    ]
   },
   {
-    id: "taylor-swift-candlelight",
+    id: "taylor-swift",
     name: "Taylor Swift Candlelight",
     category: "Concierto",
+    location: "Por definir",
+    image: "/images/taylor-candlelight.jpg",
+    description: "Tributo a Taylor Swift a la luz de las velas",
+    price: "Variable",
+    tags: ["Música", "Tributo", "Acústico"],
     schedules: [
-      { id: "taylor-s1", date: "2026-10-19", time: "19:00", label: "19 de Octubre, 7:00 PM" },
-      { id: "taylor-s2", date: "2026-10-19", time: "21:00", label: "19 de Octubre, 9:00 PM" }
-    ],
-    location: "Casa de la Cultura",
-    image: "/images/taylor-candlelight.jpg", // TBD
-    description: "Tributo sinfónico a la luz de las velas a los mejores éxitos de Taylor Swift.",
-    price: "$$$",
-    tags: ["Sinfónico", "Swiftie", "Acústico"]
+      {
+        id: "taylor-1",
+        date: "2026-10-19",
+        time: "Noche",
+        label: "19 de Octubre"
+      }
+    ]
   },
   {
     id: "cine",
     name: "Cine",
     category: "Cine",
+    location: "Cine a elegir",
+    image: "/images/cine.jpg",
+    description: "Película a elección",
+    price: "Variable",
+    tags: ["Películas", "Relajado"],
     schedules: [
-      { id: "cine-s1", date: "Variable", time: "19:00", label: "Cualquier día, Noche" },
-      { id: "cine-s2", date: "Variable", time: "16:00", label: "Cualquier día, Tarde" }
-    ],
-    location: "Cineplanet / Cinemark",
-    image: "/images/cine.jpg", // TBD
-    description: "Palomitas, buena película y una gran compañía.",
-    price: "$",
-    tags: ["Películas", "Relajado"]
+      {
+        id: "cine-1",
+        date: "Variable",
+        time: "Tarde/Noche",
+        label: "Fecha a coordinar"
+      }
+    ]
   },
   {
     id: "teatro",
     name: "Teatro",
     category: "Teatro",
+    location: "Teatro a elegir",
+    image: "/images/teatro.jpg",
+    description: "Obra de teatro a elección",
+    price: "Variable",
+    tags: ["Arte", "Cultura"],
     schedules: [
-      { id: "teatro-s1", date: "Variable", time: "20:00", label: "Fines de semana, 8:00 PM" }
-    ],
-    location: "Teatro Nacional",
-    image: "/images/teatro.jpg", // TBD
-    description: "Una obra de teatro para disfrutar de la actuación en vivo.",
-    price: "$$",
-    tags: ["Cultura", "Arte"]
+      {
+        id: "teatro-1",
+        date: "Variable",
+        time: "Tarde/Noche",
+        label: "Fecha a coordinar"
+      }
+    ]
+  },
+  {
+    id: "conciertos",
+    name: "Conciertos (Otros)",
+    category: "Concierto",
+    location: "Por definir",
+    image: "/images/bar con enanos.jpg",
+    description: "Algún otro concierto interesante",
+    price: "Variable",
+    tags: ["Música", "En vivo"],
+    schedules: [
+      {
+        id: "conciertos-1",
+        date: "Variable",
+        time: "Noche",
+        label: "Fecha a coordinar"
+      }
+    ]
   },
   {
     id: "hablando-huevadas",
     name: "Hablando Huevadas",
     category: "Show",
-    schedules: [
-      { id: "hh-s1", date: "Variable", time: "21:00", label: "Domingos, 9:00 PM" }
-    ],
     location: "Teatro Canout",
-    image: "/images/hh.jpg", // TBD
-    description: "Humor negro y muchas risas garantizadas.",
-    price: "$$",
-    tags: ["Comedia", "Show"]
-  },
-  {
-    id: "marchar-keiko",
-    name: "Marchar contra Keiko",
-    category: "Otro",
+    image: "/images/hh.jpg",
+    description: "Show de comedia en vivo",
+    price: "Variable",
+    tags: ["Comedia", "Show"],
     schedules: [
-      { id: "mk-s1", date: "2026-08-15", time: "17:00", label: "15 de Agosto, 5:00 PM" }
-    ],
-    location: "Plaza San Martín",
-    image: "/images/marchar contra keiko.jpg",
-    description: "Llevar su piedra.",
-    price: "Gratis",
-    tags: ["Marcha", "Protesta", "Piedras"]
+      {
+        id: "hh-1",
+        date: "Variable",
+        time: "Noche",
+        label: "Fecha a coordinar"
+      }
+    ]
   }
 ];

@@ -13,37 +13,17 @@ export const activitiesData: Activity[] = [
   },
   {
     id: "fotos",
-    name: "Tomar fotos",
+    name: "Fotos",
     image: "/images/fotos.png"
   },
   {
-    id: "postre",
-    name: "Ir por un postre",
-    image: "/images/postre.png"
-  },
-  {
     id: "mirador",
-    name: "Ir a un mirador",
+    name: "Mirador",
     image: "/images/mirador.png"
   },
   {
-    id: "mk-post",
-    name: "Marchar contra Keiko",
-    image: "/images/marchar contra keiko.jpg"
-  },
-  {
-    id: "pisco-sour",
-    name: "Tomar pisco sour catedral en el Bolivarcito",
-    image: "/images/catedral pisco sour.jpg"
-  },
-  {
-    id: "bailar-enanos",
-    name: "Bailar con enanos",
-    image: "/images/bar con enanos.jpg"
-  },
-  {
-    id: "carritos-plaza",
-    name: "Manejar carritos de colores en la Plaza San Martín",
-    image: "/images/carrtios de colores.jpg"
+    id: "postre",
+    name: "Postre",
+    image: "/images/postre.png"
   }
 ];

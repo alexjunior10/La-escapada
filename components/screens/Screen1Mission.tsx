@@ -34,14 +34,14 @@ export function Screen1Mission({ onNext }: Screen1MissionProps) {
         <div className="bg-cards/60 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] shadow-lg mb-10 border border-white/60 relative text-center max-w-xl mx-auto">
           <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></div>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-medium relative z-10">
-            {messages.screen1.description}
+            {messages.screen1.content}
           </p>
         </div>
       </FadeIn>
 
       <FadeIn delay={1.8} duration={1}>
         <Button onClick={onNext} icon={<Check className="w-5 h-5" />}>
-          {messages.screen1.buttonAccept}
+          {messages.screen1.buttonNext}
         </Button>
       </FadeIn>
     </>

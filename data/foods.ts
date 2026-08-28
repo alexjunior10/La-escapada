@@ -4,12 +4,12 @@ export const foodsData: Food[] = [
   {
     id: "parrilla",
     name: "Parrilla",
-    image: "/images/parrilla.png" // Placeholder
+    image: "/images/parrilla.png"
   },
   {
     id: "carne",
     name: "Carne",
-    image: "/images/carne.png"
+    image: "/images/icono pizza 1.png"
   },
   {
     id: "patasca",

@@ -1,55 +1,57 @@
 export const messages = {
   screen0: {
-    title: "La Escapada",
-    subtitle: "Hay una noche perfecta que nadie ha planeado aún...",
-    buttonText: "Abrir el sobre secreto"
+    title: "Misión Clasificada",
+    subtitle: "Nivel de acceso: Máximo",
+    description: "Has sido seleccionada para una misión especial. ¿Aceptas el desafío?",
+    buttonStart: "Iniciar misión"
   },
   screen1: {
-    title: "El Setlist de tu Vida",
-    subtitle: "Acceso backstage 🎤",
-    description: "El equipo de producción lleva semanas preparando algo que aún no está en ningún cartel. Necesitamos tu criterio para armar el setlist perfecto. Tú eres la headliner de esta noche.",
-    buttonAccept: "Acepto el accès backstage 🎙️"
+    title: "Aceptación de Misión",
+    subtitle: "CONFIDENCIAL",
+    content: "Un comité internacional necesita tu ayuda para construir la experiencia perfecta. Tus decisiones moldearán el destino de esta aventura.",
+    buttonNext: "Aceptar misión"
   },
   screen2: {
-    title: "Era 1: El Show Principal",
-    subtitle: "Soundcheck en progreso",
-    question: "¿Qué experiencia quieres como plato fuerte de la noche?",
-    buttonNext: "Siguiente era →"
+    title: "Experiencias",
+    subtitle: "FASE 1",
+    question: "De las siguientes opciones, ¿cuáles llamarían tu atención para una misión encubierta?",
+    buttonNext: "Continuar"
   },
   screen3: {
-    title: "Era 2: La Gira",
-    subtitle: "Coordinando las fechas",
-    question: "¿Cuándo señalamos la fecha del show?",
-    buttonNext: "Fecha confirmada 📌"
+    title: "Disponibilidad",
+    subtitle: "FASE 2",
+    question: "El tiempo es clave. ¿Qué fechas y horarios se alinean mejor con tu disponibilidad?",
+    buttonNext: "Confirmar horarios"
   },
   screen4: {
-    title: "Era 3: El Catering del Tour",
-    subtitle: "Zona de artistas",
-    question: "¿Qué pide la headliner en su rider técnico?",
-    buttonNext: "Rider aprobado ✅"
+    title: "Provisiones",
+    subtitle: "FASE 3",
+    question: "Toda misión requiere energía. ¿Qué opciones culinarias son de tu preferencia?",
+    buttonNext: "Siguiente fase"
   },
   screen5: {
-    title: "Era 4: El Afterparty",
-    subtitle: "Después de las luces",
-    question: "¿Cómo cerramos esta noche legendaria?",
-    buttonNext: "Setlist completo 🎉"
+    title: "Post-Misión",
+    subtitle: "FASE 4",
+    question: "Una vez completado el objetivo principal, ¿cómo prefieres retirarte?",
+    buttonNext: "Finalizar análisis"
   },
   screen6: {
-    title: "Taylor está revisando el setlist...",
-    subtitle: "Por favor espere",
+    analyzing: "Analizando compatibilidad...",
+    progressText: "Procesando datos tácticos..."
   },
   screen7: {
-    title: "Resumen del tour",
-    subtitle: "Sold Out",
-    buttonNext: "Ver el cartel"
+    title: "Resumen del Plan",
+    subtitle: "MISIÓN CONFIGURADA",
+    eventsTitle: "Objetivos Principales",
+    schedulesTitle: "Ventana de Tiempo",
+    foodsTitle: "Provisiones Seleccionadas",
+    activitiesTitle: "Plan de Retirada",
+    buttonNext: "Ver Evaluación Final"
   },
   screen8: {
-    title: "Hay un pequeño detalle...",
-    revelation: "Me gustaría vivir esta experiencia contigo."
-  },
-  screen9: {
-    title: "¿Qué dices?",
-    buttonYes: "Aceptar ❤️",
-    buttonThink: "Todavía estoy procesando esta propuesta 🤔"
+    revealPrefix: "Hay un pequeño detalle...",
+    revealMessage: "Me gustaría vivir esta experiencia contigo.",
+    buttonAccept: "Aceptar ❤️",
+    buttonDecline: "Todavía estoy procesando esta misión 😹"
   }
 };

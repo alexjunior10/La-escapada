@@ -46,6 +46,8 @@ export type Activity = {
 };
 
 export type MissionData = {
+  sessionId: string;
+  sessionStartTime: number;
   selectedEvents: string[]; // Event IDs
   selectedSchedules: string[]; // Schedule IDs
   selectedFoods: string[]; // Food IDs

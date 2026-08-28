@@ -24,11 +24,27 @@ export default function Home() {
   const [confettiImage, setConfettiImage] = useState<string | null>(null);
   
   const [missionData, setMissionData] = useState<MissionData>({
+    sessionId: "",
+    sessionStartTime: 0,
     selectedEvents: [],
     selectedSchedules: [],
     selectedFoods: [],
     selectedActivities: [],
   });
+
+  useEffect(() => {
+    const generateSessionId = () => {
+      const date = new Date().toISOString().slice(0,10).replace(/-/g, '');
+      const hex = Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0').toUpperCase();
+      return `ctf-${date}-${hex}`;
+    };
+    
+    setMissionData(prev => ({
+      ...prev,
+      sessionId: generateSessionId(),
+      sessionStartTime: Date.now()
+    }));
+  }, []);
 
   const triggerConfetti = (imageSrc: string) => {
     // Reproducir sonido

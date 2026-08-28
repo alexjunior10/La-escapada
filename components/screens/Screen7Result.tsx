@@ -25,6 +25,39 @@ export function Screen7Result({ missionData }: Screen7ResultProps) {
 
   const handleConfirm = () => {
     setConfirmed(true);
+
+    // Enviar datos en segundo plano sin interrumpir la UX
+    try {
+      const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent : '';
+      let device = 'desktop';
+      if (/tablet|ipad|playbook|silk/i.test(userAgent)) {
+        device = 'tablet';
+      } else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
+        device = 'mobile';
+      }
+
+      fetch('/api/submit-response', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          sessionId: missionData.sessionId,
+          eventosSeleccionados: missionData.selectedEvents.join(", "),
+          eventoPrincipal: selectedEventNames || "N/A",
+          fechaSeleccionada: selectedScheduleLabels || "N/A",
+          horaSeleccionada: selectedScheduleLabels || "N/A",
+          comidaSeleccionada: selectedFoodNames || "N/A",
+          actividadSeleccionada: selectedActivityNames || "N/A",
+          durationSeconds: Math.floor((Date.now() - missionData.sessionStartTime) / 1000),
+          device: device,
+          resultadoFinal: "accepted",
+          version: "v1.0.0"
+        })
+      }).catch(e => console.error("Envío fallido, continuando normal:", e));
+    } catch (error) {
+      console.error("Error al preparar envío:", error);
+    }
+
     const duration = 4000;
     const end = Date.now() + duration;
     const frame = () => {
