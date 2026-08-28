@@ -42,7 +42,7 @@ export function Screen0Welcome({ onNext }: Screen0WelcomeProps) {
         {/* 5. Botón CTA */}
         <FadeIn delay={3.6} duration={1}>
           <Button onClick={onNext} icon={<ArrowRight className="w-5 h-5" />}>
-            {messages.screen0.buttonText}
+            {messages.screen0.buttonStart}
           </Button>
         </FadeIn>
       </div>
