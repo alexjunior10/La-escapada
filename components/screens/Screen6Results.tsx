@@ -14,7 +14,7 @@ export function Screen6Results({ onNext }: Screen6ResultsProps) {
     // Avanzar automáticamente después del tiempo de transición + un extra para la animación
     const timer = setTimeout(() => {
       onNext();
-    }, siteConfig.theme.transitionDuration * 2.5); // 2.5 segundos de análisis para crear emoción
+    }, 1000 * 2.5); // 2.5 segundos de análisis para crear tensión
     
     return () => clearTimeout(timer);
   }, [onNext]);
@@ -50,7 +50,7 @@ export function Screen6Results({ onNext }: Screen6ResultsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          {messages.screen6.title}
+          {messages.screen6.analyzing}
         </motion.h2>
 
         <motion.p
@@ -59,7 +59,7 @@ export function Screen6Results({ onNext }: Screen6ResultsProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          {messages.screen6.subtitle}
+          {messages.screen6.progressText}
         </motion.p>
         
         <div className="w-64 h-3 bg-accent/20 rounded-full overflow-hidden relative shadow-inner">
@@ -67,7 +67,7 @@ export function Screen6Results({ onNext }: Screen6ResultsProps) {
             className="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-primary to-secondary rounded-full"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: (siteConfig.theme.transitionDuration * 2) / 1000, ease: "linear" }}
+            transition={{ duration: 2.0, ease: "linear" }}
           >
             {/* Shine effect */}
             <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-[shimmer_1.5s_infinite]"></div>
