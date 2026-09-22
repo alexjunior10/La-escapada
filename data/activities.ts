@@ -17,9 +17,14 @@ export const activitiesData: Activity[] = [
     image: "/images/fotos.png"
   },
   {
-    id: "mirador",
-    name: "Mirador",
-    image: "/images/mirador.png"
+    id: "lum",
+    name: "Visitar el LUM",
+    image: "/images/lum.png"
+  },
+  {
+    id: "casa-tambo",
+    name: "Casa Tambo",
+    image: "/images/casa-tambo.png"
   },
   {
     id: "postre",
