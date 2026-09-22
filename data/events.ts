@@ -2,56 +2,68 @@ import { AppEvent } from "@/types";
 
 export const eventsData: AppEvent[] = [
   {
-    id: "amen",
-    name: "Amén",
-    category: "Concierto",
-    location: "Por definir",
-    image: "/images/amen.jpg",
-    description: "Concierto de Amén",
+    id: "bella-durmiente",
+    name: "La Bella Durmiente",
+    category: "Teatro",
+    location: "La Cúpula de las Artes",
+    image: "/images/bella-durmiente.jpg",
+    description: "Ballet de San Petersburgo",
     price: "Variable",
-    tags: ["Música", "Rock"],
+    tags: ["Ballet", "Arte", "Danza"],
     schedules: [
       {
-        id: "amen-1",
-        date: "2026-08-21",
-        time: "Noche",
-        label: "21 de Agosto"
+        id: "bella-1",
+        date: "2026-10-07",
+        time: "8:00 PM",
+        label: "Miércoles 7 de Octubre"
+      },
+      {
+        id: "bella-2",
+        date: "2026-10-08",
+        time: "5:00 PM",
+        label: "Jueves 8 de Octubre"
       }
     ]
   },
   {
-    id: "hans-zimmer",
-    name: "Hans Zimmer",
+    id: "jose-jose",
+    name: "José José Candlelight",
     category: "Concierto",
-    location: "Por definir",
-    image: "/images/hans-zimmer.jpg",
-    description: "Tributo o concierto de Hans Zimmer",
+    location: "Teatro Principal - Manuel A. Segura",
+    image: "/images/jose-jose-candlelight.jpg",
+    description: "Tributo a José José a la luz de las velas",
     price: "Variable",
-    tags: ["Música Clásica", "Soundtracks"],
+    tags: ["Música", "Tributo", "Romántico"],
     schedules: [
       {
-        id: "hz-1",
-        date: "2026-09-09",
-        time: "Noche",
-        label: "9 de Septiembre"
+        id: "jose-jose-1",
+        date: "2026-10-11",
+        time: "5:00 PM",
+        label: "Domingo 11 de Octubre"
       }
     ]
   },
   {
-    id: "bacilos",
-    name: "Bacilos",
-    category: "Concierto",
-    location: "Por definir",
-    image: "/images/bacilos.jpg",
-    description: "Concierto de Bacilos",
+    id: "cuatro-estaciones",
+    name: "Las Cuatro Estaciones",
+    category: "Teatro",
+    location: "Gran Teatro Nacional",
+    image: "/images/cuatro-estaciones.png",
+    description: "Ballet Nacional del Perú - Vivaldi",
     price: "Variable",
-    tags: ["Música", "Pop Latino"],
+    tags: ["Ballet", "Música Clásica", "Danza"],
     schedules: [
       {
-        id: "bacilos-1",
-        date: "2026-09-18",
-        time: "Noche",
-        label: "18 de Septiembre"
+        id: "cuatro-estaciones-1",
+        date: "2026-09-26",
+        time: "8:00 PM",
+        label: "Sábado 26 de Septiembre"
+      },
+      {
+        id: "cuatro-estaciones-2",
+        date: "2026-09-27",
+        time: "5:30 PM",
+        label: "Domingo 27 de Septiembre"
       }
     ]
   },
@@ -74,38 +86,44 @@ export const eventsData: AppEvent[] = [
     ]
   },
   {
-    id: "cine",
-    name: "Cine",
-    category: "Cine",
-    location: "Cine a elegir",
-    image: "/images/cine.jpg",
-    description: "Película a elección",
+    id: "parque-leyendas",
+    name: "Parque de las Leyendas",
+    category: "Otro",
+    location: "Parque de las Leyendas",
+    image: "/images/parque-leyendas.png",
+    description: "Paseo, zoológico y aire libre",
     price: "Variable",
-    tags: ["Películas", "Relajado"],
+    tags: ["Paseo", "Naturaleza", "Al aire libre"],
     schedules: [
       {
-        id: "cine-1",
-        date: "Variable",
-        time: "Tarde/Noche",
-        label: "Fecha a coordinar"
+        id: "parque-leyendas-1",
+        date: "2026-09-27",
+        time: "11:00 AM",
+        label: "Domingo 27 de Septiembre"
       }
     ]
   },
   {
-    id: "teatro",
-    name: "Teatro",
+    id: "romeo-y-julieta",
+    name: "Romeo y Julieta",
     category: "Teatro",
-    location: "Teatro a elegir",
-    image: "/images/teatro.jpg",
-    description: "Obra de teatro a elección",
+    location: "Teatro Municipal de Lima",
+    image: "/images/romeo-y-julieta.png",
+    description: "Obra de teatro en el Teatro Municipal",
     price: "Variable",
-    tags: ["Arte", "Cultura"],
+    tags: ["Teatro", "Romance", "Drama", "Cultura"],
     schedules: [
       {
-        id: "teatro-1",
-        date: "Variable",
-        time: "Tarde/Noche",
-        label: "Fecha a coordinar"
+        id: "romeo-1",
+        date: "2026-10-10",
+        time: "8:00 PM",
+        label: "Sábado 10 de Octubre"
+      },
+      {
+        id: "romeo-2",
+        date: "2026-10-11",
+        time: "7:00 PM",
+        label: "Domingo 11 de Octubre"
       }
     ]
   },
@@ -139,9 +157,9 @@ export const eventsData: AppEvent[] = [
     schedules: [
       {
         id: "hh-1",
-        date: "Variable",
-        time: "Noche",
-        label: "Fecha a coordinar"
+        date: "2026-10-15",
+        time: "7:30 PM",
+        label: "Jueves 15 de Octubre"
       }
     ]
   }
