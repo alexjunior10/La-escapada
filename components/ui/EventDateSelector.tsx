@@ -16,6 +16,7 @@ export function EventDateSelector({ events, selectedScheduleIds, onSelect }: Eve
     event.schedules.map(schedule => ({
       ...schedule,
       eventName: event.name,
+      category: event.category,
       location: event.location,
       eventId: event.id
     }))
@@ -52,12 +53,21 @@ export function EventDateSelector({ events, selectedScheduleIds, onSelect }: Eve
               }
               backdrop-blur-md p-5`}
           >
-            <div className="flex justify-between items-start mb-2">
-              <h3 className={`font-bold text-lg ${isSelected ? "text-primary" : "text-foreground"}`}>
-                {schedule.eventName}
-              </h3>
+            <div className="flex justify-between items-start gap-2 mb-2">
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <h3 className={`font-bold text-lg ${isSelected ? "text-primary" : "text-foreground"}`}>
+                  {schedule.eventName}
+                </h3>
+                <span className={`text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full border transition-colors ${
+                  isSelected 
+                    ? "bg-primary text-white border-primary shadow-sm" 
+                    : "bg-primary/10 text-primary border-primary/20"
+                }`}>
+                  {schedule.category}
+                </span>
+              </div>
               {isSelected && (
-                <span className="bg-primary text-white text-xs px-2 py-1 rounded-full font-semibold shadow-sm">
+                <span className="bg-primary text-white text-xs px-2.5 py-1 rounded-full font-semibold shadow-sm shrink-0">
                   Seleccionado
                 </span>
               )}

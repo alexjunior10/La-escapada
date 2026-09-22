@@ -7,6 +7,7 @@ import Image from "next/image";
 interface OptionCardProps {
   id: string;
   title: string;
+  category?: string;
   image?: string;
   description?: string;
   selected: boolean;
@@ -14,7 +15,7 @@ interface OptionCardProps {
   index: number;
 }
 
-export function OptionCard({ id, title, image, description, selected, onClick, index }: OptionCardProps) {
+export function OptionCard({ id, title, category, image, description, selected, onClick, index }: OptionCardProps) {
   return (
     <motion.button
       initial={{ opacity: 0, y: 20 }}
@@ -44,9 +45,20 @@ export function OptionCard({ id, title, image, description, selected, onClick, i
       </div>
 
       <div className="flex-1 pr-8">
-        <h3 className={`font-semibold text-lg transition-colors ${selected ? "text-primary" : "text-foreground"}`}>
-          {title}
-        </h3>
+        <div className="flex items-center gap-2 flex-wrap mb-0.5">
+          <h3 className={`font-semibold text-lg transition-colors ${selected ? "text-primary" : "text-foreground"}`}>
+            {title}
+          </h3>
+          {category && (
+            <span className={`text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full border transition-colors ${
+              selected 
+                ? "bg-primary text-white border-primary shadow-sm" 
+                : "bg-primary/10 text-primary border-primary/20"
+            }`}>
+              {category}
+            </span>
+          )}
+        </div>
         {description && (
           <p className="text-sm text-foreground/70 mt-1 line-clamp-2">
             {description}

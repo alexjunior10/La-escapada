@@ -42,6 +42,7 @@ export function Screen2Experiences({ selectedEvents, onToggleEvent, onNext }: Sc
             key={event.id}
             id={event.id}
             title={event.name}
+            category={event.category}
             description={event.description}
             image={event.image}
             selected={selectedEvents.includes(event.id)}

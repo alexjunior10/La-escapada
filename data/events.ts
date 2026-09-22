@@ -4,7 +4,7 @@ export const eventsData: AppEvent[] = [
   {
     id: "bella-durmiente",
     name: "La Bella Durmiente",
-    category: "Teatro",
+    category: "Ballet",
     location: "La Cúpula de las Artes",
     image: "/images/bella-durmiente.jpg",
     description: "Ballet de San Petersburgo",
@@ -28,7 +28,7 @@ export const eventsData: AppEvent[] = [
   {
     id: "jose-jose",
     name: "José José Candlelight",
-    category: "Concierto",
+    category: "Candlelight",
     location: "Teatro Principal - Manuel A. Segura",
     image: "/images/jose-jose-candlelight.jpg",
     description: "Tributo a José José a la luz de las velas",
@@ -46,7 +46,7 @@ export const eventsData: AppEvent[] = [
   {
     id: "cuatro-estaciones",
     name: "Las Cuatro Estaciones",
-    category: "Teatro",
+    category: "Ballet",
     location: "Gran Teatro Nacional",
     image: "/images/cuatro-estaciones.png",
     description: "Ballet Nacional del Perú - Vivaldi",
@@ -70,7 +70,7 @@ export const eventsData: AppEvent[] = [
   {
     id: "taylor-swift",
     name: "Taylor Swift Candlelight",
-    category: "Concierto",
+    category: "Candlelight",
     location: "Por definir",
     image: "/images/taylor-candlelight.jpg",
     description: "Tributo a Taylor Swift a la luz de las velas",
@@ -88,7 +88,7 @@ export const eventsData: AppEvent[] = [
   {
     id: "parque-leyendas",
     name: "Parque de las Leyendas",
-    category: "Otro",
+    category: "Paseo",
     location: "Parque de las Leyendas",
     image: "/images/parque-leyendas.png",
     description: "Paseo, zoológico y aire libre",
