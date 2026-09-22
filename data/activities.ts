@@ -32,6 +32,11 @@ export const activitiesData: Activity[] = [
     image: "/images/marchar-keiko.png"
   },
   {
+    id: "carritos-centro",
+    name: "Manejar carritos en el centro",
+    image: "/images/carritos-centro.png"
+  },
+  {
     id: "postre",
     name: "Postre",
     image: "/images/postre.png"
