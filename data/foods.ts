@@ -7,9 +7,9 @@ export const foodsData: Food[] = [
     image: "/images/parrilla.png"
   },
   {
-    id: "carne",
-    name: "Carne",
-    image: "/images/icono pizza 1.png"
+    id: "caramandungas",
+    name: "Robar Caramandungas",
+    image: "/images/caramandungas.png"
   },
   {
     id: "patasca",
