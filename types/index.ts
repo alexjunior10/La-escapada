@@ -12,7 +12,7 @@ export type Sticker = {
   isImagePng?: boolean;
 };
 
-export type EventCategory = 'Concierto' | 'Teatro' | 'Ballet' | 'Candlelight' | 'Paseo' | 'Show' | 'Cine' | 'Otro';
+export type EventCategory = 'Concierto' | 'Teatro' | 'Ballet' | 'Candlelight' | 'Paseo' | 'Show' | 'Cine' | 'Misión' | 'Otro';
 
 export type EventSchedule = {
   id: string;

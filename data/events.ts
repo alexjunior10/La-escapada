@@ -128,20 +128,20 @@ export const eventsData: AppEvent[] = [
     ]
   },
   {
-    id: "conciertos",
-    name: "Conciertos (Otros)",
-    category: "Concierto",
-    location: "Por definir",
-    image: "/images/bar con enanos.jpg",
-    description: "Algún otro concierto interesante",
-    price: "Variable",
-    tags: ["Música", "En vivo"],
+    id: "tirar-piedras-keiko",
+    name: "Tirarle piedras a Keiko",
+    category: "Misión",
+    location: "Palacio de Gobierno",
+    image: "/images/marchar-keiko.png",
+    description: "Misión patriótica y cívica",
+    price: "Gratis",
+    tags: ["Misión", "Marcha", "Plan Encubierto"],
     schedules: [
       {
-        id: "conciertos-1",
-        date: "Variable",
-        time: "Noche",
-        label: "Fecha a coordinar"
+        id: "keiko-1",
+        date: "2026-09-26",
+        time: "12:00 PM",
+        label: "Domingo 26 de Septiembre"
       }
     ]
   },
